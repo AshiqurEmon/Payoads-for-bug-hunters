@@ -6,3 +6,6 @@ ffuf -request req.txt -request-proto https -mode clusterbomb -w user.txt:UFUZZ -
 
 
 ffuf -u url/FUZZ -w -recursive
+ 
+
+ffuf -u url/FUZZ -e .conf,.php,.aspx,.db,.bak -c
