@@ -1,0 +1,31 @@
+“230 login successful” port:21 org:orgName
+product:"Apache httpd" port:"80"
+ssl.cert.subject.CN:"http://target.com"
+Ssl:"http://company.com http.title:admin
+1. "\x03\x00\x00\x0b\x06\xd0\x00\x00\x124\x00" 
+2. "root@" port:23 -login -password -name -Session
+3. "X-AspNet-Version" http.title:"Outlook" -"x-owa-version"
+---
+1 . Search rdp password
+2. Already Logged-In as root via Telnet
+3. Exchange 2013 / 2016
+"Server: IP Webcam Server" "200 OK"
+"Authentication: disabled" port:445
+
+Org: "http://target.org" has_vuln:true
+ssl:facebook.* 200
+net:http://xxx.xxx.xx.x/xx
+ssl:http://company.com "Index of /" 200
+
+"MongoDB Server Information" port:27017 -authentication
+html:"def_wirelesspassword"
+230 'anonymous@' login ok org:OrgName
+ssl:*.company.com 200
+
+org:"TARGET" http.title:"login"
+This is my most fav dorks html:”Dashboard Jenkins” http.component:”jenkins”
+
+title:"GitLab" + Server: "nginx"
+230 ‘anonymous@’ login ok
+
+"root@" port:23 -login -password -name -Session
