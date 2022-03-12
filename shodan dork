@@ -1,7 +1,7 @@
 “230 login successful” port:21 org:orgName
 product:"Apache httpd" port:"80"
-ssl.cert.subject.CN:"http://target.com"
-Ssl:"http://company.com http.title:admin
+ssl.cert.subject.CN:"target.com"
+Ssl:"company.com http.title:admin
 1. "\x03\x00\x00\x0b\x06\xd0\x00\x00\x124\x00" 
 2. "root@" port:23 -login -password -name -Session
 3. "X-AspNet-Version" http.title:"Outlook" -"x-owa-version"
@@ -12,10 +12,9 @@ Ssl:"http://company.com http.title:admin
 "Server: IP Webcam Server" "200 OK"
 "Authentication: disabled" port:445
 
-Org: "http://target.org" has_vuln:true
+Org: "target.org" has_vuln:true
 ssl:facebook.* 200
-net:http://xxx.xxx.xx.x/xx
-ssl:http://company.com "Index of /" 200
+net:xxx.xxx.xx.x/xx ssl:company.com "Index of /" 200
 
 "MongoDB Server Information" port:27017 -authentication
 html:"def_wirelesspassword"
