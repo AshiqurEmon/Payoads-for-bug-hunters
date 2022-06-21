@@ -1,1 +1,3 @@
 <?php echo file_get_contents('/path/secret.txt'); ?>
+
+content-type: application/x-php
