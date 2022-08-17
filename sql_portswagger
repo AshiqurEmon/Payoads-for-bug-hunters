@@ -1,1 +1,2 @@
 '+UNION+SELECT+BANNER,+NULL+FROM+v$version-- oracle
+'+UNION+SELECT+table_name,NULL+FROM+all_tables-- oracle
