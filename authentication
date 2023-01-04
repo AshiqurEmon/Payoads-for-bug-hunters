@@ -11,4 +11,4 @@ ffuf -u url/FUZZ -w -recursive
 ffuf -u url/FUZZ -e .conf,.php,.aspx,.db,.bak -c
 
 2. sqli time based
-ffuf -timeout 30 -t 1 -w timebase.txt -u https://ptl-6cf59c54-7074a5cf.libcurl.so/login.php -d 'username=FUZZ&password=' -mc all -ft "<1000" -X POST -H "Content-Type: application/x-www-form-urlencoded"
+ffuf -timeout 30 -t 1 -w timebase.txt -u https://domain.so/login.php -d 'username=FUZZ&password=' -mc all -ft "<1000" -X POST -H "Content-Type: application/x-www-form-urlencoded"
