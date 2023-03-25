@@ -1,0 +1,1 @@
+ffuf -u https://FUZZ.s3.amazonaws.com -w all.txt -rate 1 -t 5 -mc 200,403 -s
