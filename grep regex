@@ -1,1 +1,2 @@
 cat pingip.txt |grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"  #from ping request to file to grep ip address
+cat gospider.txt|grep -o -E "(([a-zA-Z][a-zA-Z0-9+-.]*\:\/\/)|mailto|data\:)([a-zA-Z0-9\.\&\/\?\:@\+-\_=#%;,])*" | sort -u | tee justurls.txt
