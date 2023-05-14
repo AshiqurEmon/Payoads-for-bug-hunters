@@ -1,4 +1,5 @@
 cat sitemappath.txt |while read d;do cat httpx.txt |while read f;do echo $f'/'$d;done;done
+cat httpx_sitemap.txt |httpx -silent -mc 200 |tee -a httpx_sitemap_200.txt
 for i in $(cat httpx_sitemap.txt);do echo "                                                                                         
 ==========================================================
 URL: $i
