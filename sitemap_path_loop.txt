@@ -3,4 +3,4 @@ for i in $(cat httpx_sitemap.txt);do echo "
 ==========================================================
 URL: $i
 ==========================================================
-">>1_ffuf_op_get_method_sqliblind.txt| ffuf -u $i?FUZZ -w p.txt -ft "<8000" -X GET -t 60 -s -H "Content-Type: application/x-www-form-urlencoded" ;done| tee -a 1_ffuf_op_get_method_sqliblind.txt
+">>ffuf_sitemap.txt| ffuf -u $i?FUZZ -w p.txt -ft "<8000" -X GET -t 60 -s -H "Content-Type: application/x-www-form-urlencoded" ;done| tee -a ffuf_sitemap.txt
