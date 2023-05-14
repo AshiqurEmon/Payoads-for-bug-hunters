@@ -1,0 +1,1 @@
+cat sitemappath.txt |while read d;do cat httpx.txt |while read f;do echo $f'/'$d;done;done
