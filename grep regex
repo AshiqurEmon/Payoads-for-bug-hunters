@@ -3,3 +3,6 @@ cat gospider.txt|grep -o -E "(([a-zA-Z][a-zA-Z0-9+-.]*\:\/\/)|mailto|data\:)([a-
 cat justurls.txt |qsreplace FUZZ|grep FUZZ|egrep -vi 'facebook|google|twitter|linkedin|youtube|vimeo|github\.com'
 
 cat sitemap.txt |cut -d '/' -f4|grep site|anew|tee -a sitemappath.txt
+
+2nd order subdomain grep
+cat alive.txt| grep -Eo '([^.]+\.[^.]+\.[^.]+)$'|anew|tee -a alive2.txt
