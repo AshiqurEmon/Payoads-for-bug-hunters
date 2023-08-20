@@ -8,3 +8,4 @@ cat sitemap.txt |cut -d '/' -f4|grep site|anew|tee -a sitemappath.txt
 cat alive.txt| grep -Eo '([^.]+\.[^.]+\.[^.]+)$'|anew|tee -a alive2.txt
 
 echo "https://hootsuite-online-revenue.s3.amazonaws.com" | grep -o 'https://\([^\.]*\)\.s3\.amazonaws\.com' | sed 's|https://\([^\.]*\)\.s3\.amazonaws\.com|\1|'
+echo "https://s3.amazonaws.com/inma-awards-uploads/blashblah" | grep -o 'https://s3\.amazonaws\.com/\([^/]*\)' | sed 's|https://s3\.amazonaws\.com/\([^/]*\)|\1|'
