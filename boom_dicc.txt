@@ -8,6 +8,9 @@
 %EXT%
 %EXT%.bak
 %EXT%.old
+pagespeed_admin/statistics
+pagespeed_admin/config
+pagespeed_admin
 %EXT%.php
 %EXT%.tar
 %EXT%.tgz
