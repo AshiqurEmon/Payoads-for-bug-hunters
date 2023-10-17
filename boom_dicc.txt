@@ -10,6 +10,7 @@
 %EXT%.old
 pagespeed_admin/statistics
 pagespeed_admin/config
+examples/servlets/servlet/RequestInfoExample
 pagespeed_admin
 %EXT%.php
 %EXT%.tar
