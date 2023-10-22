@@ -1,0 +1,1 @@
+cat ffuf.txt| sed -e 's/FUZZ : //g; s/FFUFHASH : [0-9a-f]\+//g; s/ //g'|while read d;do echo $d'.domain.com'|tee -a fuzz.txt;done
