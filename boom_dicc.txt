@@ -12,6 +12,7 @@ pagespeed_admin/statistics
 pagespeed_admin/config
 examples/servlets/servlet/RequestInfoExample
 pagespeed_admin
+tomcat-dir/examples/
 %EXT%.php
 %EXT%.tar
 %EXT%.tgz
