@@ -13,6 +13,11 @@ pagespeed_admin/config
 examples/servlets/servlet/RequestInfoExample
 pagespeed_admin
 tomcat-dir/examples/
+api/users
+api/v1/users
+api/v/users
+api/v2/users
+users
 release.zip
 %EXT%.php
 %EXT%.tar
