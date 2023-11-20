@@ -17,6 +17,7 @@ api/users
 database.create.json
 api/v1/users
 api/v/users
+auth.json
 api/v2/users
 users
 release.zip
