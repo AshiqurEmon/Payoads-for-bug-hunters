@@ -18,6 +18,10 @@ database.create.json
 api/v1/users
 api/v/users
 auth.json
+github.json
+github.txt
+auth.txt
+secret.txt
 api/v2/users
 users
 release.zip
