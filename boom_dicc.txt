@@ -14,6 +14,10 @@ examples/servlets/servlet/RequestInfoExample
 pagespeed_admin
 tomcat-dir/examples/
 api/users
+contracts
+memory
+enable
+disable
 database.create.json
 api/v1/users
 api/v/users
