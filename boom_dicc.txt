@@ -10,6 +10,7 @@
 %EXT%.old
 pagespeed_admin/statistics
 pagespeed_admin/config
+apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php
 examples/servlets/servlet/RequestInfoExample
 pagespeed_admin
 tomcat-dir/examples/
