@@ -11,3 +11,5 @@ echo "https://hootsuite-online-revenue.s3.amazonaws.com" | grep -o 'https://\([^
 echo "https://s3.amazonaws.com/inma-awards-uploads/blashblah" | grep -o 'https://s3\.amazonaws\.com/\([^/]*\)' | sed 's|https://s3\.amazonaws\.com/\([^/]*\)|\1|'
 
 cat subdomains.txt | awk -F'.' '{ NF--;OFS="." }1'   //exclude top level domain
+
+cat endpoint_extractor.txt|grep -oP '(?<=://)[^/]+/\K[^?]+(?=\?|$)'|anew 
