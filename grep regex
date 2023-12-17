@@ -13,3 +13,5 @@ echo "https://s3.amazonaws.com/inma-awards-uploads/blashblah" | grep -o 'https:/
 cat subdomains.txt | awk -F'.' '{ NF--;OFS="." }1'   //exclude top level domain
 
 cat endpoint_extractor.txt|grep -oP '(?<=://)[^/]+/\K[^?]+(?=\?|$)'|anew 
+
+cat remove_first_slash_hash.txt| sed 's/#//g'| sed 's#^/##'| sed 's#^/##'
