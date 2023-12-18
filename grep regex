@@ -15,3 +15,5 @@ cat subdomains.txt | awk -F'.' '{ NF--;OFS="." }1'   //exclude top level domain
 cat endpoint_extractor.txt|grep -oP '(?<=://)[^/]+/\K[^?]+(?=\?|$)'|anew 
 
 cat remove_first_slash_hash.txt| sed 's/#//g'| sed 's#^/##'| sed 's#^/##'
+
+echo 'testphp.vulnweb.com'|waybackurls|unfurl -u paths | sed -r 's#/#\n#g' | sort -u  //path from webarchive
