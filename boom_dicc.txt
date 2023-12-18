@@ -16,6 +16,7 @@ pim/flower
 apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php
 examples/servlets/servlet/RequestInfoExample
 workers
+assets/css///////../../../../../../../../etc/passwd
 tasks
 pagespeed_admin
 WEB-INF/classes/argo.properties
