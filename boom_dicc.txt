@@ -11,6 +11,7 @@
 pagespeed_admin/statistics
 pagespeed_admin/config
 pim/flower/api/workers
+jenkins/script
 pim/flower/api/tasks
 pim/flower
 apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php
