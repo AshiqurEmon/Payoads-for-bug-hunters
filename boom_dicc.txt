@@ -11,6 +11,7 @@
 pagespeed_admin/statistics
 pagespeed_admin/config
 pim/flower/api/workers
+_vti_pvt/service.cnf
 jenkins/script
 wp-config.php.bak
 wp-config.php.old
