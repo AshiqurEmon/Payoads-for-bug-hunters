@@ -20,6 +20,7 @@ pim/flower/api/tasks
 pim/flower
 apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php
 examples/servlets/servlet/RequestInfoExample
+UploadImagePopup.aspx
 workers
 assets/css///////../../../../../../../../etc/passwd
 tasks
