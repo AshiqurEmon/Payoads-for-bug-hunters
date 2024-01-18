@@ -16,6 +16,7 @@ pubweb
 _vti_pvt/service.cnf
 jenkins/script
 wp-config.php.bak
+static/version1704758401/frontend/KTPL/nestlewater/en_GB/Magento_Ui/templates/modal/modal-custom.html
 wp-config.php.old
 pim/flower/api/tasks
 pim/flower
