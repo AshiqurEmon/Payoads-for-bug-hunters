@@ -19,3 +19,6 @@ cat remove_first_slash_hash.txt| sed 's/#//g'| sed 's#^/##'| sed 's#^/##'
 echo 'testphp.vulnweb.com'|waybackurls|unfurl -u paths | sed -r 's#/#\n#g' | sort -u  //path from webarchive
 echo 'testphp.vulnweb.com'|waybackurls|unfurl -u paths |anew
 cat waymore_endpoint.txt|awk -F '/' '{for(i=1; i<=NF; i++) print $i}'|grep -v '\.'|anew // first two endpoint word by word
+
+
+grep -oE '(http://)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?'   //grep subdomain from linkfinder
