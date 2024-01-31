@@ -20,6 +20,7 @@ static/version1704758401/frontend/KTPL/nestlewater/en_GB/Magento_Ui/templates/mo
 wp-config.php.old
 pim/flower/api/tasks
 pim/flower
+entries
 apps/graphapi/vendor/microsoft/microsoft-graph/tests/GetPhpInfo.php
 examples/servlets/servlet/RequestInfoExample
 UploadImagePopup.aspx
