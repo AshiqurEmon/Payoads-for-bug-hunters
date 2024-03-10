@@ -15,6 +15,8 @@ password_control
 pubweb
 _vti_pvt/service.cnf
 jenkins/script
+phpldapadmin/index.php
+phpldapadmin/cmd.php
 dags/dataset_consumes_1/gantt?root=(((((((.*)*)*)*)*)*)*)!
 wp-config.php.bak
 static/version1704758401/frontend/KTPL/nestlewater/en_GB/Magento_Ui/templates/modal/modal-custom.html
