@@ -13,6 +13,8 @@ pagespeed_admin/config
 pim/flower/api/workers
 password_control
 app_dev.php/_profiler/open?file=app/config/parameters.yml
+cgi-bin/reset.cgi?db_prefix=%26id%26
+cgi-bin/dmt/reset.cgi?db_prefix=%26id%26
 pubweb
 _vti_pvt/service.cnf
 jenkins/script
