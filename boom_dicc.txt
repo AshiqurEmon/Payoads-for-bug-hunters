@@ -7,6 +7,7 @@
 %C0%AE%C0%AE%C0%AF
 assets/config.json
 %EXT%
+inde/index-htm/"><img src=x onerror=prompt(document.domain);>.asp
 %EXT%.bak
 %EXT%.old
 pagespeed_admin/statistics
