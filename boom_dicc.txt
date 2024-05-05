@@ -13,6 +13,7 @@ inde/index-htm/"><img src=x onerror=prompt(document.domain);>.asp
 pagespeed_admin/statistics
 pagespeed_admin/config
 pim/flower/api/workers
+sdp/struts/webconsole.html?debug=console
 password_control
 app_dev.php/_profiler/open?file=app/config/parameters.yml
 cgi-bin/reset.cgi?db_prefix=%26id%26
