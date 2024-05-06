@@ -15,6 +15,7 @@ pagespeed_admin/config
 pim/flower/api/workers
 sdp/struts/webconsole.html?debug=console
 password_control
+api/v1/reservations-with-date
 app_dev.php/_profiler/open?file=app/config/parameters.yml
 cgi-bin/reset.cgi?db_prefix=%26id%26
 cgi-bin/dmt/reset.cgi?db_prefix=%26id%26
