@@ -14,6 +14,7 @@ inde/index-htm/"><img src=x onerror=prompt(document.domain);>.asp
 pagespeed_admin/statistics
 pagespeed_admin/config
 pim/flower/api/workers
+CMSSiteUtils
 sdp/struts/webconsole.html?debug=console
 password_control
 api/v1/reservations-with-date
