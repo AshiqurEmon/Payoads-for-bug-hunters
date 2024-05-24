@@ -1,0 +1,17 @@
+cat alive.txt |tr '.' '_'|while read d;do echo $d;done
+cat alive.txt |tr '.' '_'|while read d;do echo $d'.zip';done
+cat alive.txt |tr '.' '_'|while read d;do echo $d'.zip'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |while read d;do echo $d'.zip'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |tr '.' '_'|while read d;do echo $d'.rar'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |while read d;do echo $d'.rar'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |tr '.' '-'|while read d;do echo $d'.rar'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |tr '.' '-'|while read d;do echo $d'.zip'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |tr '.' ''|while read d;do echo $d'.zip'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |sed 's/\.//g'|while read d;do echo $d'.zip'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |sed 's/\.//g'|while read d;do echo $d'.rar'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |sed 's/\.[^.]*$//'|while read d;do echo $d'.rar'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |sed 's/\.[^.]*$//'|while read d;do echo $d'.zip'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |sed 's/\.[^.]*$//'|tr '.' '_'|while read d;do echo $d'.zip'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |sed 's/\.[^.]*$//'|tr '.' '_'|while read d;do echo $d'.rar'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |sed 's/\.[^.]*$//'|tr '.' '-'|while read d;do echo $d'.rar'|anew possible_sourcecode_wordlist.txt;done
+cat alive.txt |sed 's/\.[^.]*$//'|tr '.' '-'|while read d;do echo $d'.zip'|anew possible_sourcecode_wordlist.txt;done
