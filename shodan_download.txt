@@ -1,5 +1,5 @@
 shodan download filename.json.gz 'http.html:"admin"'  //1000 result will be downloaded and each 1000 costs 1 credit
-shodan download --limit -1 file.json.gz 'http.html:"admin"' // all results will be downloaded
+shodan download --limit -1 filename.json.gz 'http.html:"admin"' // all results will be downloaded
 
 shodan parse file.json.gz
 shodan parse file.json.gz --fields ip_str,port,hostname
