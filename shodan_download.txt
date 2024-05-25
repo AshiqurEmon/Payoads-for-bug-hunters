@@ -1,0 +1,4 @@
+shodan download filename.json.gz 'http.html:"admin"'
+shodan parse file.json.gz
+shodan parse file.json.gz --fields ip_str,port,hostname
+shodan parse file.json.gz --fields ip_str,port,hostnames|awk '{print $2}'|anew|paste -sd,
