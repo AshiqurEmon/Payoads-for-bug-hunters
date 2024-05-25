@@ -13,6 +13,7 @@ inde/index-htm/"><img src=x onerror=prompt(document.domain);>.asp
 //////////////////../../../../../../../../etc/passwd
 pagespeed_admin/statistics
 pagespeed_admin/config
+static/nexus-rapture-bundle.js
 pim/flower/api/workers
 CMSSiteUtils
 geoserver/ows
