@@ -12,3 +12,7 @@ shodan parse file.json.gz --fields ip_str,port,hostnames|tee -a output_result.tx
 cat ncleiip.txt| grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+'|anew onlylfiip.txt
 cat onlylfiip.txt|while read d;do cat adminsresult.txt |while read s;do echo $s|grep $d|anew vulnerable_ip_hostname.txt;done;done
 grep -E "^($(paste -sd '|' onlylfiip.txt))" result_mycrl.txt |tee vulnerable_ip_hostname_org2.txt
+
+
+3. europe tld
+cat tld.txtcat |while read d;do shodan download --limit -1 admin.json.gz 'http.title:"admin_dash" country:"'$d'"';done
