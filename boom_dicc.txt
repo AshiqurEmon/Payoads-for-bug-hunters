@@ -6,6 +6,7 @@
 %3f/
 %C0%AE%C0%AE%C0%AF
 assets/config.json
+api/v1/settings
 %EXT%
 inde/index-htm/"><img src=x onerror=prompt(document.domain);>.asp
 %EXT%.bak
