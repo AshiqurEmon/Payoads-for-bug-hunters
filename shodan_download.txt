@@ -16,3 +16,7 @@ grep -E "^($(paste -sd '|' onlylfiip.txt))" result_mycrl.txt |tee vulnerable_ip_
 
 3. europe tld
 cat tld.txtcat |while read d;do shodan download --limit -1 admin.json.gz 'http.title:"admin_dash" country:"'$d'"';done
+
+4. domains
+cat ../urls.txt|while read d;do shodan download --limit -1 $dhostname.json.gz 'hostname:"'$d'"';done
+
