@@ -24,3 +24,4 @@ cat waymore_endpoint.txt|awk -F '/' '{for(i=1; i<=NF; i++) print $i}'|grep -v '\
 grep -oE '(http://)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?'   //grep subdomain from linkfinder
 
 grep -oP '(?<=\.)\w+\.\w+$' //grep only domain part from subdomain
+grep -oP '\* FUZZ: \K.*' input.txt //ffuf 
