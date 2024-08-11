@@ -25,3 +25,6 @@ grep -oE '(http://)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?'   //grep subd
 
 grep -oP '(?<=\.)\w+\.\w+$' //grep only domain part from subdomain
 grep -oP '\* FUZZ: \K.*' input.txt //ffuf 
+
+2. merge path and url
+awk 'NR==FNR{subdomains[++i]=$0; next} {for (j=1; j<=i; j++) print subdomains[j] $0}' httpx.txt path.txt |anew combined.txt
