@@ -1,0 +1,1 @@
+cat js_alive.txt | while read -r d; do\n    curl -sL "$d" | js-beautify > "${d//[^a-zA-Z0-9]/_}.txt"\ndone\n
