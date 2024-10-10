@@ -12,6 +12,7 @@ inde/index-htm/"><img src=x onerror=prompt(document.domain);>.asp
 %EXT%.bak
 %EXT%.old
 //////////////////../../../../../../../../etc/passwd
+git-commit.txt
 pagespeed_admin/statistics
 pagespeed_admin/config
 static/nexus-rapture-bundle.js
