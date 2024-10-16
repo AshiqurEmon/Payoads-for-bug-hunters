@@ -11,6 +11,7 @@ api/v1/settings
 inde/index-htm/"><img src=x onerror=prompt(document.domain);>.asp
 %EXT%.bak
 %EXT%.old
+yahoo_site_admin/credentials/db.conf
 //////////////////../../../../../../../../etc/passwd
 git-commit.txt
 pagespeed_admin/statistics
