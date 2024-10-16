@@ -15,6 +15,8 @@ inde/index-htm/"><img src=x onerror=prompt(document.domain);>.asp
 git-commit.txt
 pagespeed_admin/statistics
 pagespeed_admin/config
+pw_enable
+pw_disable
 static/nexus-rapture-bundle.js
 pim/flower/api/workers
 app/etc/env.php
