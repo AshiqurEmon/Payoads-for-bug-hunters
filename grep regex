@@ -35,3 +35,5 @@ awk 'NR==FNR{subdomains[++i]=$0; next} {for (j=1; j<=i; j++) print subdomains[j]
 
 3. grep -F -f urls.txt rg_justurls.txt|tee -a rg_justurls_urls.txt
 
+4. first directory of url 
+grep -oP 'https?://[^/]+/[^/.]{3,}'|grep -v ?|anew  // https://sub.dom.tld/path from https://sub.dom.tld/path/js.php
