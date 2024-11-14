@@ -37,7 +37,7 @@ awk 'NR==FNR{subdomains[++i]=$0; next} {for (j=1; j<=i; j++) print subdomains[j]
 
 4 
 4.1 first directory of url 
-grep -oP 'https?://[^/]+/[^/.]{3,}'|egrep -vi '\?|\='|anew  // https://sub.dom.tld/path from https://sub.dom.tld/path/js.php
+grep -oP 'https?://[^/]+/[^/.]{2,}'|egrep -vi '\?|\='|anew  // https://sub.dom.tld/path from https://sub.dom.tld/path/js.php
 
 4.2 first file
 grep -oP 'https?://[^/]+/[^/]+\.(php|asp|aspx|jsp|jspx)' |egrep -vi '\?|\='|anew
