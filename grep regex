@@ -1,7 +1,7 @@
 cat pingip.txt |grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"  #from ping request to file to grep ip address
 cat gospider.txt|grep -o -E "(([a-zA-Z][a-zA-Z0-9+-.]*\:\/\/)|mailto|data\:)([a-zA-Z0-9\.\&\/\?\:@\+-\_=#%;,])*" | sort -u | tee justurls.txt
 cat *|rg -o "(([a-zA-Z][a-zA-Z0-9+-.]*\:\/\/)|mailto|data\:)([a-zA-Z0-9\.\&\/\?\:@\+-\_=#%;,])*"|sort -u |tee -a justurl.txt
-cat *|rg -o '\b(?:https?|ftp):\/\/[^\s<>\"]+'|sort -u | tee -a justturls.txt
+cat *|rg -o '\b(?:https?|ftp):\/\/[^\s<>\"]+'| sed 's/]$//'|sort -u | tee -a justturls.txt
 
 
 cat justurls.txt |qsreplace FUZZ|grep FUZZ|egrep -vi 'facebook|google|twitter|linkedin|youtube|vimeo|github\.com'
