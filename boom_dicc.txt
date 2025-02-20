@@ -21,6 +21,15 @@ pw_disable
 static/nexus-rapture-bundle.js
 pim/flower/api/workers
 app/etc/env.php
+api/user/1
+api/users/1
+users/1
+user/1
+api/v1.users/1
+api/v1/users/1
+api/v1/user/1
+v1/user/1
+v1/users/1
 mailinspector/public/loader.php?path=../../../../../../../etc/passwd
 CMSSiteUtils
 geoserver/ows
