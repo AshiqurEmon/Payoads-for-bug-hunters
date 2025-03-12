@@ -48,3 +48,5 @@ grep -oP 'https?://[^/]+/[^/]+\.(php|asp|aspx|jsp|jspx)' |egrep -vi '\?|\='|http
 5. echo '/api/ws-convey/visitor-id' | awk -F'/' '{print $3}' //grep ws-convey
 echo '/api/ws-convey/visitor-id' | awk -F'/' '{print $4}'    // grep visitor-id
 
+find . -type f | sed 's|^\./|https://sub.domain.com/|'|anew path.txt 
+
