@@ -17,6 +17,7 @@ git-commit.txt
 pagespeed_admin/statistics
 pagespeed_admin/config
 pw_enable
+api/rules
 pw_disable
 static/nexus-rapture-bundle.js
 pim/flower/api/workers
