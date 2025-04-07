@@ -17,6 +17,7 @@ git-commit.txt
 pagespeed_admin/statistics
 _payload.json
 pagespeed_admin/config
+_payload.js
 pw_enable
 api/rules
 pw_disable
