@@ -15,6 +15,7 @@ yahoo_site_admin/credentials/db.conf
 //////////////////../../../../../../../../etc/passwd
 git-commit.txt
 pagespeed_admin/statistics
+_payload.json
 pagespeed_admin/config
 pw_enable
 api/rules
