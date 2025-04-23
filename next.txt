@@ -1,7 +1,9 @@
 //image
 echo 'https://domain.com/_next/image'|httpx -mr '"url" parameter'
-cat httpx.txt|while read d;do echo $d'/_next/image?url=https://webhook.site/vintedgo/shipping-cta-illustration_v2.jpeg&w=1920&q=75'|anew image.txt;done
 cat httpx.txt|while read d;do echo $d'/_next/image'|anew next-image.txt;done
+cat next-image.txt|httpx -mr '"url" parameter' -fr|anew valid_image_next.txt
+cat httpx.txt|while read d;do echo $d'/_next/image?url=https://webhook.site/vintedgo/shipping-cta-illustration_v2.jpeg&w=1920&q=75'|anew image.txt;done
+
 
 //middle
 cat next_waymore.txt|httpx -path '/admin/login' -sc -fr|grep -i 404|anew 404.txt
