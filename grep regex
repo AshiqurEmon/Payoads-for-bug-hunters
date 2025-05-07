@@ -51,3 +51,5 @@ echo '/api/ws-convey/visitor-id' | awk -F'/' '{print $4}'    // grep visitor-id
 find . -type f | sed 's|^\./|https://sub.domain.com/|'|anew path.txt 
 
 echo "/x/fc4fc2c/" | sed 's|^/||' //remove first slash
+
+| grep -o '.*/static' //grep till /static
