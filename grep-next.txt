@@ -3,4 +3,6 @@ cat wildcard.txt|grep -vi '\:80'|grep -oP 'https?://[^/]+/(?!\d+/?$)[^/]+'|egrep
 
 grep -oP 'https?://[^/]+/(?!\d+/?$)[^/]+/(?!\d+/?$)[^/]+' /2nd directory grep
 
+grep -oP 'https?://[^/]+/(?!\d+$)[^/]+/(?!\d+$)[^/]+/(?!\d+$)[^/]+' //3rd dir grep
+
 cat gosipder.txt|unfurl paths| sed 's|^/||'|grep -i /_next/| grep -o '.*/static'|anew
