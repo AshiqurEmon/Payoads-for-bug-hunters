@@ -1,1 +1,3 @@
 cat ffuf.txt| sed -e 's/FUZZ : //g; s/FFUFHASH : [0-9a-f]\+//g; s/ //g'|while read d;do echo $d'.domain.com'|tee -a fuzz.txt;done
+ssrf greping 
+cat urls.txt|sed -E 's/=[hH][tT][tT][pP][sS]?%3A%2F%2F([a-zA-Z0-9.-]+)(%3A[0-9]+)?([^=&]*)/=https:\/\/webhook.site\/replace\3/g' 
