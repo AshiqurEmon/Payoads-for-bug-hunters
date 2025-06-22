@@ -49,6 +49,8 @@ grep -oP 'https?://[^/]+/[^/]+\.(php|asp|aspx|jsp|jspx)' |egrep -vi '\?|\='|http
 5. echo '/api/ws-convey/visitor-id' | awk -F'/' '{print $3}' //grep ws-convey
 echo '/api/ws-convey/visitor-id' | awk -F'/' '{print $4}'    // grep visitor-id
 
+cat s.txt|grep -Eo '([a-zA-Z0-9_-]+\.)+[a-zA-Z]{2,}'|grep -vE '^([a-zA-Z0-9_-]+\.[a-zA-Z]{2,})$'|anew sub.txt //grep subdomain exclude main domain
+
 find . -type f | sed 's|^\./|https://sub.domain.com/|'|anew path.txt 
 
 echo "/x/fc4fc2c/" | sed 's|^/||' //remove first slash
