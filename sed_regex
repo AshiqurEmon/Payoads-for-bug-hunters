@@ -5,3 +5,5 @@ cat urls.txt|  nl -w1 -s' ' | sed -E 's/([0-9]+) (.*)=[hH][tT][tT][pP][sS]?(%3A%
 
 
 cat urls.txt| sed -E 's/=(\/|%2F)?([^=&]*)/=https:\/\/web-hook.site\/webhookarea\/\2/g'    // =/path/file.png or =%2fpath%2fphile.ext or =path/path/file.ext
+
+sed 's/^/https:\/\//' subdomains.txt
