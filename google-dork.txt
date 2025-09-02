@@ -1,0 +1,4 @@
+site:.s3.amazonaws.com "<target>"
+(site:.r2.cloudflarestorage.com OR site:.r2.dev) "<target>"
+site:blob.core.windows.net "<target>"
+(site:.firebasestorage.app OR site:.appspot.com OR site:.firebaseio.com) "<target>"
