@@ -1,0 +1,16 @@
+1. ssrf body json url POST
+Match: https?://(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}(?:[-a-zA-Z0-9()@:%_\+.~#?&/=]*)
+Replace: https://webhook
+
+2. any json value inteading url POST
+Match: (?<="[^"]*"\s*:\s*)(?:"[^"]*"|[0-9]+|true|false|null|\[[^\]]*?\]|\{[^\}]*?\})
+Replace: "https://webhook"
+
+3. POST request body xxx-www-form-urlencoded
+Match: (?<==)([^&]*?)
+Replace: https://webhook
+
+4. get param
+Match: (?<==)([^&]*?)
+Replace: https://webhook
+
