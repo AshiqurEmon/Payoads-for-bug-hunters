@@ -56,3 +56,6 @@ find . -type f | sed 's|^\./|https://sub.domain.com/|'|anew path.txt
 echo "/x/fc4fc2c/" | sed 's|^/||' //remove first slash
 
 | grep -o '.*/static' //grep till /static
+
+
+grep -irE 'word' 2>/dev/null |grep -oP '(https?://[^\s\]\)"'\''<>,]+)' //it greps urls from path
