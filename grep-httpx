@@ -1,0 +1,1 @@
+httpx -cl -list httpx.txt -silent | sed 's/\x1b\[[0-9;]*m//g' | awk '{ match($0, /(https?:\/\/[^ ]+) \[([0-9]+)\]/, a); if(a[2]+0>10000) print a[1] " [" a[2] "]"}' //content length greater than 10000
