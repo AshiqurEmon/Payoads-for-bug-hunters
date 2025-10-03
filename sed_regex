@@ -9,3 +9,5 @@ cat urls.txt|  nl -w1 -s' ' | sed -E 's/([0-9]+) (.*)=[hH][tT][tT][pP][sS]?(%3A%
 cat urls.txt| sed -E 's/=(\/|%2F)?([^=&]*)/=https:\/\/web-hook.site\/webhookarea\/\2/g'|sed -E 's/%2F/\//g'    // =/path/file.png or =%2fpath%2fphile.ext or =path/path/file.ext
 
 sed 's/^/https:\/\//' subdomains.txt
+
+cat urls.txt | awk 'BEGIN{c=1} {split($0,a,"\\?"); domain=a[1]; if(length(a)>1){split(a[2],p,"&"); for(i in p){sub(/=.*/,"=https://web-hook/emon" c,p[i]); c++;} out=domain"?"p[1]; for(i=2;i<=length(p);i++) out=out"&"p[i]; print out} else print domain}' | grep -i web-hook // this will replace all paramter value with web-hook values
