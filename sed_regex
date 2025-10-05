@@ -12,3 +12,4 @@ sed 's/^/https:\/\//' subdomains.txt
 
 cat urls.txt | awk 'BEGIN{c=1} {split($0,a,"\\?"); domain=a[1]; if(length(a)>1){split(a[2],p,"&"); for(i in p){sub(/=.*/,"=https://web-hook/emon" c,p[i]); c++;} out=domain"?"p[1]; for(i=2;i<=length(p);i++) out=out"&"p[i]; print out} else print domain}' | grep -i web-hook // this will replace all paramter value with web-hook values
 cat urls.txt|gawk 'BEGIN{c=1}{s=$0; out=""; while(match(s,/([?&][^=]+=)(https?:\/\/|https?%3A%2F%2F)([^\/&?]+)([^&]*)/,m)){out=out substr(s,1,RSTART-1) m[1] m[2] "web-hook/emon" c m[4]; c++; s=substr(s,RSTART+RLENGTH)}; print out s}' //replace https/http/https%3A%2F%2F/http%3A%2F%2F
+cat urls.txt|gawk 'BEGIN{c=1}{s=$0;out="";while(match(s,/([?&][^=]+=)(https?:\/\/|https?%3A%2F%2F)([^\/&?]+)([^&]*)/,m)){proto=(tolower(m[2])~/^https/?"https://":"http://"); out=out substr(s,1,RSTART-1) m[1] proto "web-hook/emon" c m[4]; c++; s=substr(s,RSTART+RLENGTH)}; print out s}' //decoded shemes
