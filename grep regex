@@ -27,7 +27,7 @@ cat waymore_endpoint.txt|awk -F '/' '{for(i=1; i<=NF; i++) print $i}'|grep -v '\
 
 grep -oE '(http://)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\.[a-zA-Z]{2,})?'   //grep subdomain from linkfinder
 
-grep -oP '(?<=\.)\w+\.\w+$' //grep only domain part from subdomain
+awk -F. '{n=NF;if($(n-1)"."$n~/^(co\.uk|com\.au|org\.uk|gov\.uk)$/){print $(n-2)"."$(n-1)"."$n}else{print $(n-1)"."$n}}'  //grep only domain part from subdomain
 grep -oP '\* FUZZ: \K.*' input.txt //ffuf 
 
 2. merge path and url
