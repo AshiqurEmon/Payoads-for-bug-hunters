@@ -45,6 +45,8 @@ grep -oP 'https?://[^/]+/[^/]+\.(php|asp|aspx|jsp|jspx)' |egrep -vi '\?|\='|http
 
 4.3 first dir and file
 |grep -oP 'https?://[^/]+/[^/]+/[^/]+\.(php|asp|jsp|aspx|jspx)'|egrep -v '\?|httpx -mc 200|\='|anew dirfile.txt //   https://sub.tld/dir/file.php
+4.4 second directory
+grep -Po 'https?://[^/]+/[^/?#]+/[^/?#]+(?=(?:[/?#]|$))'
 
 5. echo '/api/ws-convey/visitor-id' | awk -F'/' '{print $3}' //grep ws-convey
 echo '/api/ws-convey/visitor-id' | awk -F'/' '{print $4}'    // grep visitor-id
