@@ -63,3 +63,5 @@ echo "/x/fc4fc2c/" | sed 's|^/||' //remove first slash
 grep -irE 'word' 2>/dev/null |grep -oP '(https?://[^\s\]\)"'\''<>,]+)' //it greps urls from path
 grep -E 'emon1101([^0-9]|$)' //for finding exact integer 
 ************\
+grep -Eo 'https?://[b-z][A-Za-z0-9._-]*(:[0-9]{1,5})?(/[^[:space:]]*)?'  // b-z https://b -  https://z
+
