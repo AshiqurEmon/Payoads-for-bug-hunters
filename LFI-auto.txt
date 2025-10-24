@@ -1,4 +1,6 @@
 1. cat lfi-big-wordlist.txt|egrep -i 'passwd|self\/environ|self\/hosts|win\.ini|etc\/hosts|boot\.ini'|anew lfi-wordlist.txt
+1.1 
+cat urls.txt |egrep -iv '\.js|\.css'|grep =|egrep -iv '\?v=|\?rev='|qsreplace /|anew slash.txt
 
 2. xargs -I {} -n1 bash -c 'sed -E "s|=[^&#]+|={}|g" urls.txt' < lfi-wordlist.txt |anew payload-urls-lfi.txt
 
