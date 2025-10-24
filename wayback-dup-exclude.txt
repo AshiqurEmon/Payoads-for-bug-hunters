@@ -1,0 +1,1 @@
+perl -ne 'chomp;$o=$_;$u=$o;$u=~s{^https?://}{}i;($p,$q)=split(/\?/,$u,2);$p=~s{/\d+}{/NUM}g;$p=~s{/[A-Za-z0-9_-]{6,}}{/RAND}g;$p=~s{=[^/?#]*}{=VAL}g;if(defined $q){@a=split(/[&;]/,$q);@a=map{(my$t=$_)=~s/=.*$/=VAL/;$t}@a;@a=sort @a;$key="$p?".join("&",@a)}else{$key=$p};print"$o\n"unless$seen{$key}++;' 
