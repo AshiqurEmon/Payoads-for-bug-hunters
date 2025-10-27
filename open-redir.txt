@@ -1,0 +1,1 @@
+HOOK="webhook.com"; COUNTER=1; while IFS= read -r domain; do domain="${domain%/}"; while IFS= read -r path || [ -n "$path" ]; do repl="${HOOK}/ironman${COUNTER}"; out="${path//${HOOK}/${repl}}"; printf '%s%s\n' "$domain" "$out"; COUNTER=$((COUNTER+1)); done < /home/kala/bugbounty/note/Hunting/open-redir-request-catcher-payload.txt; done < httpx.txt > url-redir-merge.txt
