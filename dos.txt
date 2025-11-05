@@ -20,4 +20,4 @@ awk 'BEGIN{
 
 
 sed -E 's#https?://[^/]+##; s#/\?#?#'  //endpoint extract from url
-cat dos-url.txt|httpx -rt -timeout 70 -sc -t 80|grep -E '\[(50[0-9]|510)\]' |anew dos-output.txt
+cat dos-url.txt|httpx -rt -timeout 70 -sc -t 80|awk '/\[[0-9]+\]/{ if ($0 ~ /\[(50[0-9]|510)\]/) print }'|anew dos-output.txt
