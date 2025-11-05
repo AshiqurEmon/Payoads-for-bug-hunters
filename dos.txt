@@ -1,3 +1,22 @@
 cat justturls.txt|grep =|qsreplace '/'|anew|sed -E 's/%2F/\//g'|sed -E 's#https?://[^/]+##; s#/\?#?#'|anew|grep -iv '\/\/'|python3 -c "import sys, urllib.parse; [print(urllib.parse.unquote(line.strip())) for line in sys.stdin]"|egrep -iv '(\.jpg|\.jpeg|\.png|\.gif|\.bmp|\.tif|\.tiff|\.svg|\.webp|\.ico|\.apng|\.avif|\.css|\.js|\.jsx|\.ts|\.tsx|\.json|\.txt|\.csv|\.xml|\.yml|\.yaml|\.ini|\.log|\.conf|\.htm|\.html|\.xhtml|\.php|\.asp|\.aspx|\.jsp|\.map|\.pdf|\.doc|\.docx|\.xls|\.xlsx|\.ppt|\.pptx|\.odt|\.rtf|\.md|\.mp3|\.wav|\.flac|\.ogg|\.m4a|\.mp4|\.webm|\.mkv|\.mov|\.avi|\.wmv|\.zip|\.rar|\.7z|\.tar|\.gz|\.bz2|\.xz|\.tgz|\.iso|\.exe|\.msi|\.deb|\.rpm|\.dmg|\.bin|\.apk|\.ipa|\.woff|\.woff2|\.ttf|\.eot|\.otf)([?#].*)?$'|anew path.txt
 
+awk 'BEGIN{
+  WL="/root/wordlist/dos-wordlist.txt"
+  n=0
+  while((getline p < WL) > 0){ n++; pl[n]=p }
+  close(WL)
+}
+{
+  for(i=1;i<=n;i++){
+    s=$0; out=""; tmp=s
+    while(match(tmp,/=[^&#]+/)){
+      out = out substr(tmp,1,RSTART-1) "=" pl[i]
+      tmp = substr(tmp, RSTART+RLENGTH)
+    }
+    out = out tmp
+    print out
+  }
+}' ../slash.txt > merged-output.txt
+
+
 sed -E 's#https?://[^/]+##; s#/\?#?#'  //endpoint extract from url
