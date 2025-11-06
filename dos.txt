@@ -20,4 +20,4 @@ awk 'BEGIN{
 
 
 sed -E 's#https?://[^/]+##; s#/\?#?#'  //endpoint extract from url
-cat dos-url.txt|httpx -rt -timeout 70 -sc -t 80|awk '/\[[0-9]+\]/{ if ($0 ~ /\[(50[0-9]|510)\]/) print }'|anew dos-output.txt
+cat dos-url.txt|httpx -rt -timeout 170 -sc -t 80|sed -E 's/\x1b\[[0-9;]*[a-zA-Z]//g' | awk '{if (match($0, /\[([0-9]{3})\]/, m)) {code=m[1]+0; if (code>=500 && code<=510) print $0}}'
