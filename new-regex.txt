@@ -1,0 +1,1 @@
+cat waymore.txt|sed 's|https\?://[^/]*/|/|'  //extracts path from url
