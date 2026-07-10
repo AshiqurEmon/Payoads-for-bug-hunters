@@ -1,2 +1,5 @@
 ffuf -u https://FUZZ.s3.amazonaws.com -w alive.txt -t 20 -rate 10 -timeout 5 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" -mc 200,301,302,307,308,400,403,409 -s | anew s3.txt
 ffuf -u https://storage.googleapis.com/FUZZ -w alive.txt -t 20 -rate 10 -timeout 5 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" -mc 200,301,302,307,308,400,403,409 -s | anew s3.txt
+
+ffuf -u https://FUZZ.s3.amazonaws.com -w alive.txt -t 5 -rate 3 -timeout 10 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" -mc 200,301,302,307,308,400,403,409 -s | anew s3.txt
+
